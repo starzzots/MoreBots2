@@ -2,6 +2,8 @@ from tools.windowcapture import WindowCapture
 from tools.clicks import *
 from time import time, sleep
 
+
+
 screen_size=(0,0,1920,1080)
 osrs_minimized=(0,0,1080,670)#testing this more
 
@@ -23,7 +25,7 @@ def findobjat(objsRGBVal,coords=screen_size,stepleftright=1,stepupdown=1,delta1x
                 break
                             
         if flag == 1:
-                return (new_x+delta1x,new_x+delta2x,new_y+delta1y,new_y+delta2y) #new_x,new_y imma reformate for us
+                return (new_x+delta1x,new_x+delta2x,new_y+delta1y,new_y+delta2y) #new_x,new_y imma reformat for us
 
 def locate(deltax, deltay, hwnd="RuneLite",offsetx1=0,offsetx2=0,offsety1=0,offsety2=0):
     #formats specific location on runelite 800x640 to be ready for Randomize function

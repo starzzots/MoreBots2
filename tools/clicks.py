@@ -48,7 +48,7 @@ class Randomize():
     
     
     def randleft(self):
-        pg.moveTo(self.new_x,self.new_y, duration=.2)#.06 for 
+        pg.moveTo(self.new_x,self.new_y, duration=.3)#.06 for 
         win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, self.new_x, self.new_y, 0, 0)
         time.sleep(.09)
         win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, self.new_x, self.new_y, 0, 0)
@@ -56,9 +56,9 @@ class Randomize():
     
     def uniclick(self):
         pg.moveTo(self.new_x,self.new_y, duration=.2)#.06 for 
-        pg.mouseUp(self.new_x,self.new_y)
-        time.sleep(.09)
         pg.mouseDown(self.new_x,self.new_y)
+        time.sleep(.09)
+        pg.mouseUp(self.new_x,self.new_y)
         time.sleep(.03)
     
     

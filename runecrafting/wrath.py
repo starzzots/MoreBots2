@@ -10,7 +10,7 @@ SCREEN_SIZE=(0,0,1920,1080)
 def worldhopper():
     keyboard.press('pageup')# hotkey to switch worlds
     sleep(5)
-    keyboard.release('pageup')# release the key presss
+    keyboard.release('pageup')# release the key presssas
     sleep(7.5)
     keyboard.press('x')# bag hotkey ppress
     sleep(1)
