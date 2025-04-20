@@ -5,8 +5,6 @@ from tools.clicks import *
 from time import time, sleep
 from tools.tools import *
 
-
-
 woodcutting=locate(68,59)
 woodcuttingcolor=(0,255,0)
 white=(255,255,255)

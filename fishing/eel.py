@@ -32,7 +32,10 @@ def find_finshing_spot():
         Randomize(fishing_click).randleft()
         sleep(16)
     except:
-        print("oops")
+        sleep(1.5)
+        fishing_click=findobjat((255,0,221),coords=screen_size,delta1x=8,delta2x=12,delta1y=8,delta2y=12)
+        Randomize(fishing_click).randleft()
+        sleep(4)
 
 
 def fishing_check(fishing):
