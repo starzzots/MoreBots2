@@ -3,6 +3,7 @@ sys.path.insert(0,'c:\\Users\\Kyle\\Documents\\MoreBots2')
 from tools.clicks import *
 from time import sleep
 from tools.tools import *
+import keyboard
 #400 zoom
 #full screen 1920x1080
 SCREEN_SIZE=(0,0,1920,1080)
@@ -11,7 +12,7 @@ STUCK = False
 bank_screen = (73,64,52)
 pos_1 = (0,1,0)
 pos_2 = (0,2,0)
-pos_3 = (0,3,0)
+pos_3 = (25,3,0)
 pos_4 = (0,4,0)
 pos_5 = (0,5,0)
 pos_6 = (0,6,0)
@@ -21,7 +22,7 @@ bank_color = (56,0,0)
 trapdoor_color = (255,51,255)
 wall_color = (50,87,255)
 fifth_inventory_check = (62,53,41)
-cave_cord_click = (1045,1055,898,907)
+cave_cord_click = (1042,1044,905,908)
 cave2_cord_click = (860,863,490,496)
 mysterious_ruins_cords = (975,985,444,452)
 blood_alter_cords = (752,763,524,530)
@@ -55,7 +56,7 @@ def move_to_bank():
     try:
         bank_cords = findobjat(bank_color,SCREEN_SIZE, delta1x=6, delta2x=8, delta1y=6, delta2y=8)
         Randomize(bank_cords).randleft()
-        sleep(7)
+        sleep(9)
     except:
         print("couldnt find bank")
 
@@ -63,7 +64,7 @@ def move_to_trapdoor():
     try:
         trapdoor_cords = findobjat(trapdoor_color,SCREEN_SIZE, delta1x=6, delta2x=8, delta1y=6, delta2y=8)
         Randomize(trapdoor_cords).randleft()
-        sleep(7)
+        sleep(12.8)
     except:
         print("couldnt find trapdoor")
 
@@ -83,12 +84,13 @@ def blood_alter_operations():
     Randomize((801,807,526,530)).randleft()
     sleep(.5)
     Randomize(first_inventory_cords).randleft()
-    sleep(5)
+    sleep(5.5)
 
 def house_operations():
-    Randomize((796,803,496,502)).randleft()
+    Randomize((801,803,494,496)).randleft()
     sleep(4)
-    Randomize((737,740,487,490)).randleft()
+    Randomize((740,742,490,492)).randleft()
+    sleep(7)
 
 def world_hopper():
     keyboard.press('pageup')# hotkey to switch worlds
@@ -99,14 +101,19 @@ def world_hopper():
     sleep(1)
     keyboard.release('x')#bag hotkey release
     sleep(2.5)
-        
-def main():
-    center = pg.pixel(823,537)
+    
 
-    #print(center)
+     
+           
+def main():
+    center = pg.pixel(824,537)
+
+    print(center)
+    
+    sleep(.5)
     if pg.pixel(bonus_check_cord[0],bonus_check_cord[1]) != bonus_check_color:
         Randomize(third_inventory_cords).randleft()
-        sleep(.3)
+        sleep(.8)
         return 0
     
     elif center == bank_screen:
@@ -121,39 +128,34 @@ def main():
     
     elif center == pos_1:
         move_to_trapdoor()
+       
         return 0
 
     
     elif center == pos_2:
-        STUCK = True
-        if STUCK == True:    
-            try:
-                wall_cords = findobjat(wall_color,SCREEN_SIZE, delta1x=5, delta2x=10, delta1y=5, delta2y=10)
-                Randomize(wall_cords).randleft()
-                sleep(7)
-                return 0
-            except:
-                print("couldnt find wall")
-                return 0
-        else:
-            print("freedom!")
+        try:
+            wall_cords = findobjat(wall_color,SCREEN_SIZE, delta1x=5, delta2x=8, delta1y=5, delta2y=8)
+            Randomize(wall_cords).randleft()
+            sleep(7)
+            return 0
+        except:
+            print("couldnt find wall")
             return 0
 
     
     elif center == pos_3:
-        STUCK = False
         Randomize(cave_cord_click).randleft()
-        sleep(3)
+        sleep(13.4)
         return 0
 
     elif center == pos_4:
         Randomize(cave2_cord_click).randleft()
-        sleep(3)
+        sleep(4)
         return 0
     
     elif center == pos_5:
         Randomize(mysterious_ruins_cords).randleft()
-        sleep(5)
+        sleep(6)
         return 0
     
     elif center == pos_6:
@@ -164,15 +166,28 @@ def main():
         house_operations()
         return 0 
         
-    else:
-       print(center)
-       return 0
+    else:  
+        print(center)
+        try:
+            wall_cords = findobjat(wall_color,SCREEN_SIZE, delta1x=4, delta2x=8, delta1y=4, delta2y=8)
+            Randomize(wall_cords).randleft()
+            sleep(5)
+            return 0
+        except:
+            print("couldnt find wall")
+            return 0
+        
             
-count = 199
+count = 0
  
 while True:
     count = count + main()
-    if count == 200:
+    if keyboard.is_pressed('q'):
+        print("Quitting program.")
+        break
+    if count == 80:
         world_hopper()
         count = 0
+    
+    
     

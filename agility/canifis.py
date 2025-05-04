@@ -21,6 +21,7 @@ glitched2=(0,0,15)
 fail1=(0,0,9)
 fail2=(0,0,10)
 tokenc=(205,0,0)
+real_token_color = (121,92,4)
 
 def worldhopper():
     keyboard.press('pageup')# hotkey to switch worlds
@@ -41,16 +42,16 @@ def logoutcounter():
 
 def main(): 
     center=pg.pixel(822,525)
-    token1=pg.pixel(822,478)
+    token1=pg.pixel(822,487)
     token2=pg.pixel(786,583)
     token3=pg.pixel(826,554)
     token4=pg.pixel(816,578)
     token5=pg.pixel(801,516)
     if center == pos1:
         sleep(2)
-        if token1 == tokenc:
+        if token1 == real_token_color:
             Randomize((821,825,482,487)).randleft()
-            sleep(4)
+            sleep(3.5)
             Randomize((804,819,476,493)).randleft()
             sleep(1)
         else:
@@ -58,11 +59,11 @@ def main():
             sleep(2)
     elif center == glitched:
         Randomize((1063,1073,523,539)).randleft()
-        sleep(5)
+        sleep(4.5)
     
     elif center == glitched2:
         Randomize((1231,1241,695,702)).randleft()
-        sleep(5)
+        sleep(4.5)
 
     elif center == fail1:
         sleep(1)
@@ -77,24 +78,24 @@ def main():
             Randomize((806,810,514,520)).randleft()
             sleep(2)
             Randomize((749,756,540,552)).randleft()
-            sleep(8)
+            sleep(7)
         else:
             Randomize((732,742,526,535)).randleft()
-            sleep(8)
+            sleep(7)
     elif center == pos3:
         if token2 == tokenc:
             Randomize((790,795,575,580)).randleft()
-            sleep(4)
+            sleep(3.5)
             Randomize((750,757,549,561)).randleft()
-            sleep(6)
+            sleep(5.5)
         else:
             Randomize((717,728,600,612)).randleft()
-            sleep(6)
+            sleep(5.5)
     elif center == pos4:
         sleep(2)
         if token4 == (255,0,0):
             Randomize((805,809,575,579)).randleft()
-            sleep(4)
+            sleep(3.5)
             Randomize((819,826,590,607)).randleft()
             sleep(1)
         else:
@@ -106,10 +107,10 @@ def main():
             Randomize((820,824,558,563)).randleft()
             sleep(2)
             Randomize((847,856,539,549)).randleft()
-            sleep(8)
+            sleep(7.5)
         else:
             Randomize((848,858,572,579)).randleft()
-            sleep(8)
+            sleep(7.5)
     elif center == pos6:
         sleep(1)
         Randomize((1038,1051,522,538)).randleft()

@@ -4,6 +4,7 @@ from time import time, sleep
 
 
 
+
 screen_size=(0,0,1920,1080)
 osrs_minimized=(0,0,1080,670)#testing this more
 
