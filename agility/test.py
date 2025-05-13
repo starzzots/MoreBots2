@@ -17,4 +17,4 @@ from tools.windowcapture import WindowCapture
 from tools.clicks import *
 from tools.tools import *
 from time import time, sleep
-print(pg.pixel(851,488))
+print(pg.pixel(851,488))#
