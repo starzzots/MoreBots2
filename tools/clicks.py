@@ -55,11 +55,10 @@ class Randomize():
         time.sleep(.03)
     
     def uniclick(self):
-        pg.moveTo(self.new_x,self.new_y, duration=.2)#.06 for 
-        pg.mouseDown(self.new_x,self.new_y)
-        time.sleep(.09)
-        pg.mouseUp(self.new_x,self.new_y)
-        time.sleep(.03)
+        pg.moveTo(self.new_x,self.new_y, duration=.45)#.06 for 
+        pg.mouseDown(self.new_x,self.new_y,duration=.25)
+        pg.mouseUp(self.new_x,self.new_y,duration=.15)
+        
     
     
     def dragmove(self,x,y):

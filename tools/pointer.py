@@ -21,7 +21,7 @@ while True:
     
     elif keyboard.is_pressed('p'):
         try:
-            print(f"Randomize(({top_left[0]},{bottom_right[0]},{top_left[1]},{bottom_right[1]})).randleft()")
+            print(f"Randomize(({top_left[0]},{bottom_right[0]},{top_left[1]},{bottom_right[1]})).uniclick()")
             break
         except:
             print("oof try to get coords first with '1' and '2'")
