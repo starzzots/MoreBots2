@@ -30,7 +30,8 @@ def bot():
         drop()
 while True:
 
-    if keyboard.is_pressed('q'):
-        sys.exit()
+    if win32api.GetAsyncKeyState(win32con.VK_ESCAPE):
+        show_exit_popup()
+        sys.exit(0)  # Exit the script when ESC is pressed
         break
     bot()

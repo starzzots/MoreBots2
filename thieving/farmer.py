@@ -18,7 +18,7 @@ from tools.clicks import *
 from tools.tools import *
 from time import time, sleep
 farmer_color=(255,0,221)
-pg.PAUSE = 0
+pg.PAUSE = 0 # Set the pause duration to 0 to disable automatic pauses after each call 
 def steal(obj_color):
     farmer_location=findobjat(obj_color, delta1x = 0, delta2x=0,delta1y=12,delta2y=12)
     return farmer_location
@@ -50,8 +50,9 @@ def eat():
 
     
 while True:
-    if keyboard.is_pressed('q'):
-        sys.exit()
+    if win32api.GetAsyncKeyState(win32con.VK_ESCAPE):
+        show_exit_popup()
+        sys.exit(0)  # Exit the script when ESC is pressed
         break
     if pg.pixel(bagslotfullscreen[14][0], bagslotfullscreen[14][-1]) == (255,0,0):
         drop_garbage()

@@ -101,5 +101,9 @@ if __name__ == "__main__":
             sleep(40)
             worldhopper()
             count = 0
+        if win32api.GetAsyncKeyState(win32con.VK_ESCAPE):
+            show_exit_popup()
+            sys.exit(0)  # Exit the script when ESC is pressed
+            break
         else:
             count= count+ main()

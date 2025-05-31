@@ -199,8 +199,9 @@ count = 0
  
 while True:
     count = count + main()
-    if keyboard.is_pressed('q'):
-        print("Quitting program.")
+    if win32api.GetAsyncKeyState(win32con.VK_ESCAPE):
+        show_exit_popup()
+        sys.exit(0)  # Exit the script when ESC is pressed
         break
     if count == 80:
         world_hopper()
