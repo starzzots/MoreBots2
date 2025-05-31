@@ -1,13 +1,20 @@
 from tools.windowcapture import WindowCapture
 from tools.clicks import *
 from time import time, sleep
-
+import tkinter as tk
+from tkinter import messagebox
 
 
 
 screen_size=(0,0,1500,1080)
 osrs_minimized=(0,0,1080,670)#testing this more
 
+def show_exit_popup():
+    root = tk.Tk()
+    root.withdraw()  # Hide the main tkinter window
+    messagebox.showinfo("Exiting", "Bot successfully quit.\nThank you for using MoreBots2!")
+    root.destroy()
+  
 def findobjat(objsRGBVal,coords=screen_size,stepleftright=1,stepupdown=1,delta1x=0,delta2x=0,delta1y=0,delta2y=0,hwnd="RuneLite"):#topleftx, toplefty, bottomrightx, bottomrighty
     flag=0
     wincap = WindowCapture(hwnd)

@@ -112,11 +112,17 @@ def main():
 
 if __name__ =='__main__':
     counter=0
+    # Start the ESC listener in a background thread
     while True: 
         counter=counter+logoutcounter()
         if counter >= 120:
             worldhopper()
             counter = 0
+        if win32api.GetAsyncKeyState(win32con.VK_ESCAPE):
+            show_exit_popup()
+            sys.exit(0)  # Exit the script when ESC is pressed
+            break
         else:
             sleep(1)
             main()
+    sys.exit(0)  # Exit the script when ESC is pressed
