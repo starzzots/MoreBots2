@@ -25,15 +25,15 @@ class Randomize():
         self.new_y = random.randrange(self.y_min, self.y_max+1)
 
     def shiftclick(self):
+    
         keyboard.press('shift')
-        pg.moveTo(self.new_x,self.new_y, duration=.08)
-        time.sleep(.05)
-        win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, self.new_x, self.new_y, 0, 0)
-        time.sleep(.05)
-        win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, self.new_x, self.new_y, 0, 0)
-        time.sleep(.08)
-        keyboard.release('shift')
+        pg.moveTo(self.new_x,self.new_y, duration=.2)#.06 for 
+        pg.mouseDown(self.new_x,self.new_y)
+        time.sleep(.09)
+        pg.mouseUp(self.new_x,self.new_y)
         time.sleep(.03)
+        keyboard.release('shift')
+        time.sleep(.10)
 
     def move(self):
         pg.moveTo(self.new_x,self.new_y, duration=.02)
@@ -55,11 +55,10 @@ class Randomize():
         time.sleep(.03)
     
     def uniclick(self):
-        pg.moveTo(self.new_x,self.new_y, duration=.2)#.06 for 
-        pg.mouseDown(self.new_x,self.new_y)
-        time.sleep(.09)
-        pg.mouseUp(self.new_x,self.new_y)
-        time.sleep(.03)
+        pg.moveTo(self.new_x,self.new_y)#.06 for
+        time.sleep(.05) 
+        pg.mouseDown(self.new_x,self.new_y, duration=.15)
+        pg.mouseUp(self.new_x,self.new_y, duration=.08)
     
     
     def dragmove(self,x,y):

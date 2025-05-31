@@ -5,7 +5,7 @@ from time import time, sleep
 
 
 
-screen_size=(0,0,1920,1080)
+screen_size=(0,0,1500,1080)
 osrs_minimized=(0,0,1080,670)#testing this more
 
 def findobjat(objsRGBVal,coords=screen_size,stepleftright=1,stepupdown=1,delta1x=0,delta2x=0,delta1y=0,delta2y=0,hwnd="RuneLite"):#topleftx, toplefty, bottomrightx, bottomrighty
@@ -22,7 +22,7 @@ def findobjat(objsRGBVal,coords=screen_size,stepleftright=1,stepupdown=1,delta1x
                 
                 new_x= x+wincap.coords[0]
                 new_y= y+wincap.coords[1]
-                sleep(0.05)
+                sleep(0.02)
                 break
                             
         if flag == 1:

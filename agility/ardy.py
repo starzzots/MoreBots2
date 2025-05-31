@@ -69,7 +69,7 @@ def main():
         if tokenc == tokenp:
             Randomize((835,841,530,532)).randleft()
             sleep(3)
-        Randomize((771,779,531,544)).randleft()
+        Randomize((771,778,529,538)).randleft()
         sleep(1.5)
     elif center == pos5:
         Randomize((820,825,602,614)).randleft()

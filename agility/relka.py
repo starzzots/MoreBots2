@@ -71,7 +71,7 @@ def main():
         sleep(3)
     elif center == pos2:
         Randomize((833,840,680,691)).uniclick()
-        sleep(3)
+        sleep(9)
     elif center == pos3:
         if token2 == tokenc:
             Randomize((851,855,544,547)).uniclick()
@@ -114,7 +114,7 @@ def main():
     return 0
 
 if __name__ == "__main__":
-    counter=199
+    counter=0
     while True:
         sleep(1.5)
         counter=counter+logoutcounter()
