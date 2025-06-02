@@ -12,6 +12,7 @@ Built entirely in Python, this tool was designed as a learning project in automa
 - Modular design (`Randomize`, agility, runecrafting, fishing, mining bots.)
 
 ## 📸 Screenshots
+Quickly running ardy.exe to show the script detecting color and moving mouse to location and clicking. "ESC" to close the program a pop up will show up saying the bot has been stopped
 [Watch demo on Imgur] (https://imgur.com/a/7r7wQjH)
 
 ## 🛠️ Technologies Used
