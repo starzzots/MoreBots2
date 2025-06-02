@@ -16,10 +16,7 @@ Quickly running ardy.exe to show the script detecting color and moving mouse to 
 [Watch demo on Imgur] (https://imgur.com/a/7r7wQjH)
 
 ## 🛠️ Technologies Used
-- Python 3
-- `pyautogui`
-- `keyboard`
-- `time`, `random`, `win32api`, etc.
+**Tech Used**: Python, pyautogui, keyboard, pywin32, automation scripting
 
 ## 💡 Why I Built This
 I built this as a self-taught developer to learn more about:
