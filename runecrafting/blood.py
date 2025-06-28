@@ -21,10 +21,10 @@ from tools.clicks import *
 from time import sleep
 from tools.tools import *
 import keyboard
-#400 zoom
+#400 zoom I need to edit this potentially
 #full screen 1920x1080
 SCREEN_SIZE=(0,0,1920,1080)
-STUCK = False
+STUCK = False # I need to fix the stuck feature
 
 bank_screen = (73,64,52)
 pos_1 = (0,1,0)
@@ -52,7 +52,7 @@ exit_bank_button = (920,927,61,68)
 start_bank_click = (589,598,96,106)
 bonus_check_color = (56,255,255)
 bonus_check_cord = (1587,768)
-
+#potentially need to update the core loop in order to get the stuck feature to work
 def bank_operation():
     Randomize(start_bank_click).randleft()
     sleep(1)
