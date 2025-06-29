@@ -26,6 +26,8 @@ pos_4 = (0,2,0)
 pos_5 = (25,3,0)
 pos_6 = (0,4,0)
 pos_7 = (0,5,0)
+pos_8 = (0,8,0)
+pos_9 = (0,9,0)
 
 
 
@@ -44,15 +46,19 @@ def main():
     center = pg.pixel(502,468)
     #pg.displayMousePosition()
     #print(center)
+    if pg.pixel(944,640) != (53,53,255):
+        Randomize((904,908,630,632)).randleft()
+        sleep(.2)
     if stuck_state == pos_4:
         if center == pos_1:
             stuck_state = pos_4
             try:
-                bank_click = findobjat((0,0,171), SCREEN_SIZE, delta1x=-5,delta2x=-5,delta1y=3,delta2y=3)
+                bank_click = findobjat((0,0,171), SCREEN_SIZE, delta1x=-5,delta2x=-5,delta1y=5,delta2y=5)
                 Randomize(bank_click).randleft()
                 sleep(7)
             except:
                 print("where is the bank?")
+            return 1
         elif center == pos_2:
             stuck_state = pos_4
             #pg.displayMousePosition()
@@ -70,6 +76,7 @@ def main():
             sleep(.7)
             Randomize((597,607,34,44)).randleft() # exit bank button
             sleep(.7)
+            return 0
         elif center == pos_3:
             stuck_state = pos_4
             try:
@@ -78,6 +85,7 @@ def main():
                 sleep(7)
             except:
                 print("Where is the trapdoor...")
+            return 0
         elif center == pos_4:
             stuck_state = pos_4
             #pg.displayMousePosition()
@@ -87,40 +95,67 @@ def main():
                 sleep(5.8)
             except:
                 print("IM STUCK AHHHHHH!")
+            return 0
         elif center == pos_5:
             stuck_state == pos_5
             Randomize((594,612,640,653)).randleft()
             sleep(8)
+            return 0
         elif center == pos_6:
             stuck_state=pos_4
             Randomize((532,534,433,441)).randleft()
             sleep(3.6)
+            return 0
         elif center == pos_7:
             stuck_state=pos_4
             Randomize((640,644,391,397)).randleft()
-            sleep(3.6)
+            sleep(6.3)
+            return 0
+        elif center == pos_8:
+            stuck_state = pos_4
+            Randomize((440,446,463,468)).randleft()
+            sleep(3.2)
+            Randomize((858,868,635,640)).randleft()#second bag slot
+            sleep(.2)
+            Randomize((483,491,464,471)).randleft()
+            sleep(.2)
+            Randomize((858,868,635,640)).randleft()#second bag slot
+            sleep(.2)
+            Randomize((483,491,464,471)).randleft()
+            sleep(.2)
+            Randomize((818,826,633,639)).randleft()#first bag slot
+            sleep(5.2)
+        elif center == pos_9:
+            stuck_state = pos_4
+            Randomize((480,486,437,440)).randleft()
+            sleep(2.6)
+            Randomize((428,430,428,434)).randleft()
+            sleep(6.3)
+            return 0
+
     elif stuck_state == pos_5:
         if center == pos_6:
             stuck_state=pos_4
             Randomize((532,534,433,441)).randleft()
             sleep(3.6)
+            return 0
         try:
             cave_click = findobjat((0,107,44), SCREEN_SIZE, delta1x=0,delta2x=0,delta1y=0,delta2y=0)
             Randomize(cave_click).randleft()
             sleep(5)
         except:
             print("whyyyyyyyyyyyyyyyyyyyyyy")
-
+        return 0
 count = 0
  
 while True:
-    #count = count + main()
+    count = count + main()
     if win32api.GetAsyncKeyState(win32con.VK_ESCAPE):
         show_exit_popup()
         sys.exit(0)  # Exit the script when ESC is pressed
         break
     main()
-    #if count == 80:
-        #world_hopper()
-        #count = 0
+    if count == 80:
+        world_hopper()
+        count = 0
     
