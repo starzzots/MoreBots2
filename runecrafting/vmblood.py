@@ -18,7 +18,10 @@ from tools.tools import *
 from time import time, sleep
 import keyboard
 SCREEN_SIZE = (0,0,1200,900)
+stuck_state = (0,2,0)
 pos_1 = (255,250,0)
+pos_2=(73,64,52)
+
 
 
 def world_hopper():
@@ -32,8 +35,10 @@ def world_hopper():
     sleep(2.5)
 
 def main():
-    #pg.displayMousePosition()
+    
     center = pg.pixel(502,468)
+    #pg.displayMousePosition()
+    print(center)
     if center == pos_1:
         try:
             bank_click = findobjat((0,0,171), SCREEN_SIZE, delta1x=-5,delta2x=-5,delta1y=3,delta2y=3)
@@ -41,8 +46,22 @@ def main():
             sleep(7)
         except:
             print("where is the bank?")
-
-     
+    elif center == pos_2:
+        pg.displayMousePosition()
+        Randomize((271,281,74,84)).randleft() #tab2 in bank
+        sleep(.8)
+        Randomize((202,210,112,120)).randleft() # click essense in bank
+        sleep(.7)
+        Randomize((861,869,634,641)).randleft() #slot 2 in invo
+        sleep(.8)
+        Randomize((202,210,112,120)).randleft() # click essense in bank
+        sleep(.7)
+        Randomize((861,869,634,641)).randleft() #slot 2 in invo
+        sleep(.8)
+        Randomize((202,210,112,120)).randleft() # click essense in bank
+        sleep(.7)
+        Randomize((597,607,34,44)).randleft() # exit bank button
+        sleep(.7)
 count = 0
  
 while True:
