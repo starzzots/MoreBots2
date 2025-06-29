@@ -56,10 +56,10 @@ def main():
             try:
                 bank_click = findobjat((0,0,171), SCREEN_SIZE, delta1x=-5,delta2x=-5,delta1y=5,delta2y=5)
                 Randomize(bank_click).randleft()
-                sleep(7)
+                sleep(6.5)
             except:
                 print("where is the bank?")
-            return 1
+            return 0
         elif center == pos_2:
             STUCK_STATE = pos_4
             #pg.displayMousePosition()
@@ -77,8 +77,9 @@ def main():
             sleep(.3)
             Randomize((597,607,34,44)).randleft() # exit bank button
             sleep(.3)
-            return 0
+            return 1
         elif center == pos_3:
+            sleep(.3)
             STUCK_STATE = pos_4
             try:
                 trapdoor_click = findobjat((125,0,207), delta1x=0,delta2x=0,delta1y=5,delta2y=6)
@@ -104,7 +105,7 @@ def main():
             try:
                 cave_click = findobjat((0,107,44), SCREEN_SIZE, delta1x=0,delta2x=0,delta1y=0,delta2y=0)
                 Randomize(cave_click).randleft()
-                sleep(5)
+                sleep(4)
             except:
                 print("whyyyyyyyyyyyyyyyyyyyyyy")
             return 0
@@ -167,13 +168,12 @@ def main():
 count = 79
  
 while True:
-    count = count + main()
     if win32api.GetAsyncKeyState(win32con.VK_ESCAPE):
         show_exit_popup()
         sys.exit(0)  # Exit the script when ESC is pressed
         break
-    main()
-    if count >= 80:
+    if count == 80:
         world_hopper()
         count = 0
+    count = count + main()
     
