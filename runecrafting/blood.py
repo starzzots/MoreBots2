@@ -16,10 +16,6 @@ from tools.windowcapture import WindowCapture
 from tools.clicks import *
 from tools.tools import *
 from time import time, sleep
-    
-from tools.clicks import *
-from time import sleep
-from tools.tools import *
 import keyboard
 #400 zoom I need to edit this potentially
 #full screen 1920x1080
