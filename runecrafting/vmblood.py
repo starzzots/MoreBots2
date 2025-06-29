@@ -90,7 +90,7 @@ def main():
             stuck_state = pos_4
             #pg.displayMousePosition()
             try:
-                secret_door_click = findobjat((13,13,255), SCREEN_SIZE, delta1x=0,delta2x=0,delta1y=0,delta2y=0)
+                secret_door_click = findobjat((13,13,255), SCREEN_SIZE, delta1x=0,delta2x=0,delta1y=5,delta2y=5)
                 Randomize(secret_door_click).randleft()
                 sleep(5.8)
             except:
@@ -132,6 +132,13 @@ def main():
             Randomize((428,430,428,434)).randleft()
             sleep(6.3)
             return 0
+        else:
+            try:
+                secret_door_click = findobjat((13,13,255), SCREEN_SIZE, delta1x=0,delta2x=0,delta1y=5,delta2y=5)
+                Randomize(secret_door_click).randleft()
+                sleep(5.8)
+            except:
+                print("IM STUCK AHHHHHH!")
 
     elif stuck_state == pos_5:
         if center == pos_6:
@@ -140,7 +147,7 @@ def main():
             sleep(3.6)
             return 0
         try:
-            cave_click = findobjat((0,107,44), SCREEN_SIZE, delta1x=0,delta2x=0,delta1y=0,delta2y=0)
+            cave_click = findobjat((0,107,44), SCREEN_SIZE, delta1x=0,delta2x=0,delta1y=5,delta2y=5)
             Randomize(cave_click).randleft()
             sleep(5)
         except:
