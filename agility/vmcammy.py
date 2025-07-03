@@ -91,7 +91,7 @@ def main():
     
     elif center == pos_4:
         Randomize((369,398,502,511)).randleft()
-        return 0
+        return 1
     
     elif center == pos_5:
 
@@ -116,19 +116,21 @@ def main():
     
     elif center == pos_8:
         Randomize((369,398,502,511)).randleft()
-        return 1
+        return 0
+    else:
+        return 0
     
-
+counter=159
 
 if __name__ == "__main__":
-    counter=159
     while True:
         sleep(1.5)
-        counter=counter+main()
-        if counter >= 160:
+        if counter == 160:
             worldhopper()
             counter = 0
         if win32api.GetAsyncKeyState(win32con.VK_ESCAPE):
             show_exit_popup()
             sys.exit(0)  # Exit the script when ESC is pressed
             break
+        else:
+            counter=counter+main()
