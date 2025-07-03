@@ -79,18 +79,22 @@ def main():
             Randomize((459,465,535,539)).randleft()
             return 0
     elif center == pos_3:
-        
-        if pg.pixel(528,448) == (203,0,0):
+        sleep(2)
+        if pg.pixel(528,448) == (205,0,0):
             Randomize((527,530,453,455)).randleft()
             sleep(2)
             Randomize((478,498,528,535)).randleft()
+            sleep(3)
             return 0
         else:    
             Randomize((499,535,522,531)).randleft()
+            sleep(4)
             return 0
     
     elif center == pos_4:
+        
         Randomize((369,398,502,511)).randleft()
+        sleep(4.5)
         return 1
     
     elif center == pos_5:
@@ -107,7 +111,7 @@ def main():
             sleep(2)
             return 0
     elif center == pos_6:
-        Randomize((771,773,311,316)).randleft()
+        Randomize((771,773,311,312)).randleft()
         return 0
     
     elif center == pos_7:
@@ -115,12 +119,12 @@ def main():
         return 0
     
     elif center == pos_8:
-        Randomize((369,398,502,511)).randleft()
+        Randomize((348,353,503,509)).randleft()
         return 0
     else:
         return 0
     
-counter=159
+counter=0
 
 if __name__ == "__main__":
     while True:
