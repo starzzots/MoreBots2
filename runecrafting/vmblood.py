@@ -165,7 +165,7 @@ def main():
             except:
                 print("whyyyyyyyyyyyyyyyyyyyyyy")
             return 0
-count = 79
+count = 0
  
 while True:
     if win32api.GetAsyncKeyState(win32con.VK_ESCAPE):
