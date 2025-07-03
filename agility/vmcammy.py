@@ -54,7 +54,12 @@ def main():
 
 
     if center == pos_1:
-        Randomize((381,387,407,427)).randleft()
+        if pg.pixel(470,441) == (205,0,0):
+            Randomize((476,478,440,441)).randleft()
+            sleep(2.6)
+            Randomize((405,413,438,455)).randleft()
+        else:
+            Randomize((381,387,407,427)).randleft()
     elif center == fail1:
         Randomize((687,694,530,534)).randleft()
     elif center == fail_2:
