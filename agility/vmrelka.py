@@ -43,8 +43,14 @@ def main():
     #print(center)
     if center == pos1:
         #token1 here
-        Randomize((448,464,537,553)).randleft()
-        sleep(5)
+        if pg.pixel(474,481) == (129,108,7):
+            Randomize((474,477,478,482)).randleft()
+            sleep(2)
+            Randomize((493,500,519,527)).randleft()
+            sleep(4.3)
+        else:
+            Randomize((448,464,537,553)).randleft()
+            sleep(5)
     elif center == fail1:
         Randomize((515,519,174,177)).randleft()
         sleep(10.5)
