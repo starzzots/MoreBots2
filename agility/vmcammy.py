@@ -80,7 +80,7 @@ def main():
             return 0
     elif center == pos_3:
         sleep(2)
-        if pg.pixel(528,448) == (205,0,0):
+        if pg.pixel(528,448) == (205,0,0) or pg.pixel(528,448) == (203,0,0):
             Randomize((527,530,453,455)).randleft()
             sleep(2)
             Randomize((478,498,528,535)).randleft()
@@ -129,7 +129,7 @@ counter=0
 if __name__ == "__main__":
     while True:
         sleep(1.5)
-        if counter == 160:
+        if counter == 70:
             worldhopper()
             counter = 0
         if win32api.GetAsyncKeyState(win32con.VK_ESCAPE):
