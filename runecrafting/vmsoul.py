@@ -79,21 +79,20 @@ def state_is():
     else:
         return 7
     
-def chisel():
-    for i in range(32):
+def chisel(n):
+    for i in range(n):
         Randomize((945,952,849,857)).randleft()
-        sleep(.1)
+        sleep(.05)
         Randomize((904,908,848,855)).randleft()
-        sleep(.1)
+        sleep(.08)
+        
 
 def main():
     
     center = pg.pixel(503,466) # 300 zoom
     mining_color_check = pg.pixel(68,56)
-    empty_slot_color = (62,53,41)
-    charged_essence_color = (94, 86, 79)
-    bag_slot_2_color_check = pg.pixel(865,637) #green, red or bag color
-    bag_slot_27_color_check = pg.pixel(909,853) 
+    #empty_slot_color = (62,53,41)
+    #charged_essence_color = (94, 86, 79)
     pos_number=postion_is(center, positions)
     state_number = state_is()
 
@@ -102,13 +101,13 @@ def main():
     if state_number == 1:
         sleep(.3)
         if pos_number == 1:
-            Randomize((493,396,303,309)).randleft()
-            sleep(11.8)
+            Randomize((493,496,304,308)).randleft()
+            sleep(12.3)
             Randomize((315,316,475,476)).randleft()
             sleep(1.6)
         elif pos_number == 2:
             Randomize((493,495,253,256)).randleft()
-            sleep(11.8)
+            sleep(12)
             Randomize((315,316,475,476)).randleft()
             sleep(1.6)
         elif pos_number == 3:
@@ -116,7 +115,7 @@ def main():
             sleep(7)
         else:
             pass
-        print("state 1")
+        #print("state 1")
 
 ###################################################################
 
@@ -127,7 +126,7 @@ def main():
                 pass
             else:
                 Randomize((514,527,539,550)).randleft()
-                sleep(1.6)
+                sleep(3)
 
         elif pos_number == 2:
             sleep(.3)
@@ -135,23 +134,23 @@ def main():
                 pass
             else:
                 Randomize((511,524,392,398)).randleft()
-                sleep(1.6)
-        print("state 2")
+                sleep(3)
+        #print("state 2")
 
 ###################################################################
 
     elif state_number == 3:
         sleep(.3)
         if pos_number == 1:
-            Randomize((493,396,303,309)).randleft()
-            sleep(11.8)
+            Randomize((492,496,303,309)).randleft()
+            sleep(12)
             Randomize((315,316,475,476)).randleft()
-            sleep(1.6)
+            sleep(3)
         elif pos_number == 2:
             Randomize((493,495,253,256)).randleft()
-            sleep(11.8)
-            Randomize((315,316,475,476)).randleft()
-            sleep(1.6)
+            sleep(12)
+            Randomize((315,316,473,474)).randleft()
+            sleep(3)
         elif pos_number == 3:
             Randomize((358,365,392,398)).randleft()
             sleep(2.5)
@@ -164,9 +163,27 @@ def main():
     elif state_number == 4:
         sleep(.3)
         if pos_number == 4:
-            Randomize((687,690,398,392)).randleft()
-            sleep(1.6)
-        print("state 4")
+            Randomize((687,689,388,391)).randleft()
+            sleep(3)
+        elif pos_number == 5:
+            Randomize((702,704,442,444)).randleft()
+            sleep(3)
+        elif pos_number == 6:
+            Randomize((686,689,480,483)).randleft()
+            sleep(3)
+        elif pos_number == 10:
+            Randomize((628,629,472,476)).randleft()
+            sleep(3)
+        elif pos_number == 11:
+            Randomize((709,710,693,695)).randleft()
+            sleep(3)
+        elif pos_number == 12:
+            Randomize((383,393,594,603)).randleft()
+            sleep(3)
+        else:
+            pass
+        #print("state 4")
+
 
 ###################################################################  
 #   
@@ -174,22 +191,22 @@ def main():
         sleep(.3)
         if pos_number == 4:
             Randomize((667,669,549,552)).randleft()
-            sleep(1.6)
+            sleep(3)
         elif pos_number == 3:
             Randomize((685,687,426,429)).randleft()
-            sleep(1.6)
+            sleep(3)
         elif pos_number == 5:
             Randomize((516,519,504,507)).randleft()
             sleep(5)
             Randomize((514,528,558,571)).randleft()
-            sleep(1.6)
+            sleep(3)
 
         elif pos_number == 1:
             if mining_color_check == GREEN:
                 pass
             else:
                 Randomize((514,527,539,550)).randleft()
-                sleep(1.6)
+                sleep(3)
 
         elif pos_number == 2:
             sleep(.3)
@@ -197,20 +214,26 @@ def main():
                 pass
             else:
                 Randomize((511,524,392,398)).randleft()
-                sleep(1.6)
+                sleep(3)
+        elif pos_number == 13:
+            Randomize((487,493,478,482)).randleft()
+            sleep(.2)
+
         else:
             pass
-        print("state 5")
+        #print("state 5")
 
 ###################################################################  
     
-    elif state_number == 6:
-        sleep(.3)
+    elif state_number == 6: 
+        sleep(.16)
         if pos_number == 4:
-            chisel()
+            chisel(26)
+        elif pos_number == 13:
+            chisel(24)
         else:
             pass
-        print("state 6")
+        #print("state 6")
 
 ###################################################################   
 
@@ -227,9 +250,9 @@ def main():
             sleep(1.6)
         elif pos_number == 10:
             Randomize((339,343,581,583)).randleft()
-            sleep(10)
+            sleep(11)
             Randomize((389,391,517,521)).randleft()
-            sleep(7.6)
+            sleep(8.5)
             Randomize((517,529,560,575)).randleft()
             sleep(1.6)
         else:
