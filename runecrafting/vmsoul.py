@@ -102,12 +102,12 @@ def main():
         sleep(.3)
         if pos_number == 1:
             Randomize((493,496,304,308)).randleft()
-            sleep(12.3)
+            sleep(12.6)
             Randomize((315,316,475,476)).randleft()
             sleep(1.6)
         elif pos_number == 2:
             Randomize((493,495,253,256)).randleft()
-            sleep(12)
+            sleep(12.6)
             Randomize((315,316,475,476)).randleft()
             sleep(1.6)
         elif pos_number == 3:
@@ -126,7 +126,7 @@ def main():
                 pass
             else:
                 Randomize((514,527,539,550)).randleft()
-                sleep(3)
+                sleep(6)
 
         elif pos_number == 2:
             sleep(.3)
@@ -134,7 +134,7 @@ def main():
                 pass
             else:
                 Randomize((511,524,392,398)).randleft()
-                sleep(3)
+                sleep(6)
         #print("state 2")
 
 ###################################################################
@@ -143,12 +143,12 @@ def main():
         sleep(.3)
         if pos_number == 1:
             Randomize((492,496,303,309)).randleft()
-            sleep(12)
+            sleep(12.6)
             Randomize((315,316,475,476)).randleft()
             sleep(3)
         elif pos_number == 2:
             Randomize((493,495,253,256)).randleft()
-            sleep(12)
+            sleep(12.6)
             Randomize((315,316,473,474)).randleft()
             sleep(3)
         elif pos_number == 3:
@@ -206,7 +206,7 @@ def main():
                 pass
             else:
                 Randomize((514,527,539,550)).randleft()
-                sleep(3)
+                sleep(6)
 
         elif pos_number == 2:
             sleep(.3)
@@ -214,7 +214,7 @@ def main():
                 pass
             else:
                 Randomize((511,524,392,398)).randleft()
-                sleep(3)
+                sleep(6)
         elif pos_number == 13:
             Randomize((487,493,478,482)).randleft()
             sleep(.2)
